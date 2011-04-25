@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>CheckTheCrisis</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+  	<title><%= title %></title>
+  	<%= javascript_include_tag 'jquery-1.5', 'jquery.rails', 'application' %>
+  	<%= csrf_meta_tag %>
+		<%= render 'layouts/stylesheets' %>
+	</head>
+	<body>
+		<div class="container">
+			<%= render 'layouts/header' %>
+						
+			<section>
+				<%= yield %>
+			</section>	
+			
+			<%= render 'layouts/footer' %>
+		</div>
+		
+	</body>
 </html>
